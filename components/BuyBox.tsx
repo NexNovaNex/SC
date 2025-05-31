@@ -35,7 +35,7 @@ const BuyBox = () => {
     <section id="pricing-section" className="w-full flex flex-col items-center bg-white py-8 md:py-16 px-2 md:px-4">
       <div className="max-w-3xl w-full mx-auto rounded-2xl shadow-2xl bg-gradient-to-br from-pink-50 via-white to-purple-50 border-2 border-pink-200 p-0 md:p-0">
         <div className="px-6 md:px-12 pt-8 pb-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-extrabold text-pink-700 mb-2">Natural Formula for RlS Sufferers</h2>
+          <h2 className="text-3xl md:text-4xl font-extrabold text-pink-700 mb-2">Natural Formula for RLS Sufferers</h2>
           <div className="text-lg text-pink-500 mb-4 font-semibold">Limited Time Offer</div>
           {/* Product Image */}
           <div className="flex justify-center mb-6">
