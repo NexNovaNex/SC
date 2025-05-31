@@ -845,7 +845,7 @@ export default function Page() {
               <div id="option1" className="bottle-option border-2 border-pink-300 rounded-2xl p-6 text-center cursor-pointer bg-white hover:shadow-lg transition relative text-pink-700">
                 <div className="font-bold text-lg">1 Bottle</div>
                 <div className="mb-2">30 day supply</div>
-                <div className="text-2xl font-extrabold mb-1"><span className="line-through text-gray-400 text-lg mr-1">$69</span> <span id="price1">$49.00</span></div>
+                <div className="text-2xl font-extrabold mb-1 break-words md:text-2xl text-xl"><span className="line-through text-gray-400 text-lg mr-1">$69</span> <span id="price1">$49</span></div>
                 <div className="text-xs">Per Bottle</div>
               </div>
               {/* 3 Bottles - selected by default */}
@@ -853,7 +853,7 @@ export default function Page() {
                 <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-yellow-300 text-yellow-900 text-xs font-bold px-4 py-1 rounded-full shadow-lg border-2 border-yellow-400 z-10">MOST POPULAR</div>
                 <div className="font-bold text-lg mt-2">3 Bottles</div>
                 <div className="mb-2">90 day supply</div>
-                <div className="text-2xl font-extrabold mb-1"><span className="line-through text-gray-400 text-lg mr-1">$207</span> <span id="price3">$119.00</span></div>
+                <div className="text-2xl font-extrabold mb-1 break-words md:text-2xl text-xl"><span className="line-through text-gray-400 text-lg mr-1">$207</span> <span id="price3">$119</span></div>
                 <div className="text-xs">Per Pack</div>
               </div>
               {/* 6 Bottles - not selected by default */}
@@ -861,7 +861,7 @@ export default function Page() {
                 <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-green-200 text-green-900 text-xs font-bold px-4 py-1 rounded-full shadow-lg border-2 border-green-400 z-10">BEST VALUE</div>
                 <div className="font-bold text-lg mt-2">6 Bottles</div>
                 <div className="mb-2">180 day supply</div>
-                <div className="text-2xl font-extrabold mb-1"><span className="line-through text-gray-400 text-lg mr-1">$414</span> <span id="price6">$149.00</span></div>
+                <div className="text-2xl font-extrabold mb-1 break-words md:text-2xl text-xl"><span className="line-through text-gray-400 text-lg mr-1">$414</span> <span id="price6">$149</span></div>
                 <div className="text-xs">Per Pack</div>
               </div>
             </div>

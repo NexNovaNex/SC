@@ -112,9 +112,9 @@ document.addEventListener('DOMContentLoaded', function () {
     const price1 = document.getElementById('price1');
     const price3 = document.getElementById('price3');
     const price6 = document.getElementById('price6');
-    if (price1) price1.innerText = `$${pricing[mode][1].price.toFixed(2)}`;
-    if (price3) price3.innerText = `$${pricing[mode][3].price.toFixed(2)}`;
-    if (price6) price6.innerText = `$${pricing[mode][6].price.toFixed(2)}`;
+    if (price1) price1.innerText = `$${pricing[mode][1].price}`;
+    if (price3) price3.innerText = `$${pricing[mode][3].price}`;
+    if (price6) price6.innerText = `$${pricing[mode][6].price}`;
     // Option highlight
     [1,3,6].forEach(n => {
       const el = document.getElementById(`option${n}`);
@@ -142,7 +142,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
     // Cart price
     const cartPrice = document.getElementById('cartPrice');
-    if (cartPrice) cartPrice.innerText = `$${pricing[mode][bottles].price.toFixed(2)}`;
+    if (cartPrice) cartPrice.innerText = `$${pricing[mode][bottles].price}`;
     // Update Add to Cart button link
     const addToCartBtn = document.getElementById('addToCartBtn');
     if (addToCartBtn) {
