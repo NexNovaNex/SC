@@ -88,8 +88,8 @@ export default function Page() {
 
   return (
     <div>
-      <div className="min-h-screen flex items-center justify-center bg-gradient-to-r from-pink-50 to-white">
-        <div className="max-w-6xl w-full mx-auto flex flex-col md:flex-row items-center gap-8 px-2 md:px-4 py-6 md:py-16">
+      <div className="bg-gradient-to-r from-pink-50 to-white">
+        <div className="max-w-6xl w-full mx-auto flex flex-col md:flex-row items-center gap-8 px-2 md:px-4 pt-0 md:pt-0 pb-6 md:pb-16">
           {/* Left: Text Content */}
           <div className="flex-1 max-w-xl">
             <h1 className="text-3xl md:text-4xl font-bold leading-tight mb-4 text-gray-900">
@@ -301,7 +301,7 @@ export default function Page() {
         <div className="max-w-5xl w-full">
           <h2 className="text-2xl md:text-3xl font-bold text-center text-purple-900 mb-2">I Kept Seeing the Same Ingredients — Over and Over — And It Finally Clicked</h2>
           <p className="text-center text-purple-700 mb-10">These weren't trendy sleep hacks. They were backed by real neuroscience — and made for people like me who were desperate to stop pacing the floor at 3AM.</p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mb-8">
+          <div className="grid grid-cols-3 gap-3 md:gap-6 mb-8">
             {/* Saw Palmetto */}
             <div className="flex flex-col items-center text-center">
               <img src="/ingredient-saw-palmetto.jpg" alt="Paeoniae Radix (Bai Shao)" className="w-24 h-24 md:w-28 md:h-28 rounded-full object-cover mb-2 md:mb-4 border-4 border-purple-200" />
@@ -798,82 +798,80 @@ export default function Page() {
           </div>
         </section>
       {/* Pricing/Package Choice Section */}
-      <section id="pricing-section" className="w-full flex flex-col items-center bg-white py-4 md:py-16 px-2 md:px-4">
-        <div className="max-w-5xl w-full">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {/* Subscription Card */}
-            <div className="relative rounded-2xl border-4 border-pink-400 bg-pink-50 shadow-xl flex flex-col items-center px-3 md:px-6 pt-6 md:pt-8 pb-4 md:pb-6">
-              {/* Special Offer Bar */}
-              <div className="absolute -top-6 left-1/2 -translate-x-1/2 bg-yellow-300 border-2 border-yellow-500 rounded-full px-6 py-2 font-bold text-yellow-900 text-sm flex items-center gap-2 shadow z-10">
-                <span role="img" aria-label="party">🎉</span> Limited Time Offer
+      <section id="pricing-section" className="w-full flex flex-col items-center bg-white py-8 md:py-16 px-2 md:px-4">
+        <div className="max-w-3xl w-full mx-auto rounded-2xl shadow-2xl bg-gradient-to-br from-pink-50 via-white to-purple-50 border-2 border-pink-200 p-0 md:p-0">
+          <div className="px-6 md:px-12 pt-8 pb-4 text-center">
+            <h2 className="text-3xl md:text-4xl font-extrabold text-pink-700 mb-2">Natural Formula for RlS Sufferers</h2>
+            <div className="text-lg text-pink-500 mb-4 font-semibold">Limited Time Offer</div>
+            {/* Product Image */}
+            <div className="flex justify-center mb-6">
+              <img src="/bottle-placeholder.jpg" alt="Product bottle" className="w-32 h-40 md:w-40 md:h-52 object-contain rounded-xl shadow-lg border-4 border-pink-100 bg-white" />
+            </div>
+            {/* Toggle */}
+            <div className="flex flex-col items-center mb-2">
+              <div className="flex items-center gap-2 rounded-full p-1 border-2 border-pink-300 bg-white">
+                <button id="buyOnceBtn" className="buy-toggle px-6 py-2 rounded-full font-bold border-2 transition bg-gray-100 text-pink-700 border-pink-300">Buy Once</button>
+                <button id="subscribeBtn" className="buy-toggle px-6 py-2 rounded-full font-bold border-2 transition bg-pink-600 text-white border-pink-600">Subscribe & Save <span id="savePercent">43%</span></button>
               </div>
-              <div className="text-2xl md:text-3xl font-extrabold text-pink-700 text-center mb-2 mt-2">1 Month Subscribe & Save</div>
-              <div className="text-center text-pink-600 font-semibold mb-2">Delivered monthly. Cancel anytime.</div>
-              <div className="flex flex-col items-center mb-4">
-                <img src="/package-subscription.png" alt="Subscription" className="w-40 h-48 object-contain rounded-xl border-4 border-pink-200 bg-white mb-2" />
-              </div>
-              <ul className="w-full mb-4 text-base font-medium">
-                <li className="flex items-center justify-between py-1 border-b border-pink-100"><span className="flex items-center gap-2 text-green-600 font-bold">✔ 30-day supply delivered monthly</span><span className="text-pink-700 font-bold line-through text-gray-400">$69</span></li>
-                <li className="flex items-center justify-between py-1 border-b border-pink-100"><span className="flex items-center gap-2 text-green-600 font-bold">✔ 30% off for life</span><span className="text-pink-700 font-bold line-through text-gray-400">$20</span></li>
-                <li className="flex items-center justify-between py-1 border-b border-pink-100"><span className="flex items-center gap-2 text-pink-600">🎁 <span className="font-bold">FREE</span> Sleep Recovery Tracker</span><span className="text-pink-700 font-bold line-through text-gray-400">$18</span></li>
-                <li className="flex items-center justify-between py-1 border-b border-pink-100"><span className="flex items-center gap-2 text-pink-600">🎧 <span className="font-bold">FREE</span> RLS Relief Audio Guide</span><span className="text-pink-700 font-bold line-through text-gray-400">$21</span></li>
-                <li className="flex items-center justify-between py-1 border-b border-pink-100"><span className="flex items-center gap-2 text-pink-600">🚚 <span className="font-bold">FREE</span> Priority Shipping</span><span className="text-pink-700 font-bold line-through text-gray-400">$9</span></li>
-                <li className="flex items-center justify-between py-1"><span className="flex items-center gap-2 text-green-600 font-bold">✔ VIP Access to New Wellness Tools</span></li>
-              </ul>
-              <div className="flex items-center justify-center gap-2 text-lg font-bold mb-2">
-                <span className="text-gray-400 line-through">$118</span>
-                <span className="text-3xl text-pink-700">$49</span>
-                <span className="text-pink-600 text-base">/month</span>
-              </div>
-              <div className="text-pink-700 text-sm mb-4">Save $69 today + $20 every month</div>
-              <a
-                href="https://getserenitycore.com/tools/recurring/checkout_link?magic=eyJpdGVtcyI6IFt7ImlkIjogNTU1MzAyMzc2MjQ1ODUsICJxdWFudGl0eSI6IDEsICJzZWxsaW5nX3BsYW4iOiA2ODkwOTkyMTEwMTcsICJzZWxsaW5nX3BsYW5fZ3JvdXBfaWQiOiA3NzA4NTM0NDAwOX1dfQ==&store_id=200246"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-full bg-green-500 hover:bg-green-600 text-white font-bold py-4 rounded-full text-xl transition flex items-center justify-center gap-2 shadow mt-2 mb-2"
-                onClick={() => { if (typeof window !== 'undefined' && window.fbq) { window.fbq('track', 'AddToCart'); } }}
-              >
-                <span role="img" aria-label="cart">🛒</span> ADD TO CART
-              </a>
-              <div className="text-green-700 text-sm font-semibold flex items-center gap-2 mb-1"><span role="img" aria-label="guarantee">✅</span> 365-Day Money Back Guarantee</div>
-              <div className="text-gray-700 text-xs mb-2">Online portal for easy cancel, skip, or pause.</div>
-              <div className="w-full bg-yellow-100 border border-yellow-300 rounded-lg py-2 px-3 text-yellow-800 text-center text-xs font-semibold flex items-center justify-center gap-2 mt-2">
-                <span className="text-yellow-500">⏰</span> {timeLeft > 0 ? (<span>Ships today if ordered within <span className="font-bold">{formatTime(timeLeft)}</span></span>) : (<span className="font-bold">Shipping window closed</span>)}
+              {/* Features/Benefits Box */}
+              <div className="w-full max-w-lg mx-auto mt-2">
+                <ul id="benefitsList" className="border-2 border-pink-200 bg-white rounded-xl px-6 py-4 grid grid-cols-1 gap-2 text-base font-medium shadow">
+                  <li className="flex items-center justify-between gap-2" data-benefit="discount">
+                    <span className="flex items-center gap-2 text-green-600 font-bold">✔ 30% off for life</span>
+                    <span className="line-through text-pink-400">$20</span>
+                  </li>
+                  <li className="flex items-center justify-between gap-2" data-benefit="tracker">
+                    <span className="flex items-center gap-2 text-pink-600">🎁 <span className="font-bold">FREE</span> Sleep Recovery Tracker</span>
+                    <span className="line-through text-pink-400">$18</span>
+                  </li>
+                  <li className="flex items-center justify-between gap-2" data-benefit="audio">
+                    <span className="flex items-center gap-2 text-pink-600">🎧 <span className="font-bold">FREE</span> RLS Relief Audio Guide</span>
+                    <span className="line-through text-pink-400">$21</span>
+                  </li>
+                  <li className="flex items-center justify-between gap-2" data-benefit="shipping">
+                    <span className="flex items-center gap-2 text-pink-600">🚚 <span className="font-bold">FREE</span> Priority Shipping</span>
+                    <span className="line-through text-pink-400">$9</span>
+                  </li>
+                  <li className="flex items-center gap-2" data-benefit="vip">
+                    <span className="flex items-center gap-2 text-green-600 font-bold">✔ VIP Access to New Wellness Tools</span>
+                  </li>
+                </ul>
               </div>
             </div>
-            {/* Single Purchase Card */}
-            <div className="relative rounded-2xl border-4 border-gray-300 bg-white shadow-xl flex flex-col items-center px-3 md:px-6 pt-6 md:pt-8 pb-4 md:pb-6">
-              <div className="text-2xl md:text-3xl font-extrabold text-gray-900 text-center mb-2">1 Month Supply<br/>One Time Purchase</div>
-              <div className="text-center text-gray-600 font-semibold mb-2">Try it once before committing</div>
-              <div className="flex flex-col items-center mb-4">
-                <img src="package-subscription.png" alt="Single Purchase" className="w-40 h-48 object-contain rounded-xl border-4 border-gray-200 bg-white mb-2" />
+            {/* Bottle Options */}
+            <div className="grid grid-cols-3 gap-3 md:gap-6 mb-6">
+              {/* 1 Bottle - not selected by default */}
+              <div id="option1" className="bottle-option border-2 border-pink-300 rounded-2xl p-6 text-center cursor-pointer bg-white hover:shadow-lg transition relative text-pink-700">
+                <div className="font-bold text-lg">1 Bottle</div>
+                <div className="mb-2">30 day supply</div>
+                <div className="text-2xl font-extrabold mb-1"><span className="line-through text-gray-400 text-lg mr-1">$69</span> <span id="price1">$49.00</span></div>
+                <div className="text-xs">Per Bottle</div>
               </div>
-              <ul className="w-full mb-4 text-base font-medium">
-                <li className="flex items-center justify-between py-1 border-b border-gray-100"><span className="flex items-center gap-2 text-green-600 font-bold">✔ 30-day supply</span><span className="text-gray-900 font-bold">$69</span></li>
-                <li className="flex items-center justify-between py-1 border-b border-gray-100"><span className="flex items-center gap-2 text-red-400">✘ 30% off for life</span><span className="text-gray-400 font-bold line-through">$20</span></li>
-                <li className="flex items-center justify-between py-1 border-b border-gray-100"><span className="flex items-center gap-2 text-gray-400">✘ Sleep Recovery Tracker</span><span className="text-gray-400 font-bold line-through">$18</span></li>
-                <li className="flex items-center justify-between py-1 border-b border-gray-100"><span className="flex items-center gap-2 text-gray-400">✘ RLS Relief Audio Guide</span><span className="text-gray-400 font-bold line-through">$21</span></li>
-                <li className="flex items-center justify-between py-1 border-b border-gray-100"><span className="flex items-center gap-2 text-gray-400">✘ Priority Shipping</span><span className="text-gray-400 font-bold line-through">$9</span></li>
-                <li className="flex items-center justify-between py-1"><span className="flex items-center gap-2 text-gray-400">✘ VIP Access to New Wellness Tools</span></li>
-              </ul>
-              <div className="flex items-center justify-center gap-2 text-lg font-bold mb-2">
-                <span className="text-gray-400 line-through">$91</span>
-                <span className="text-3xl text-gray-900">$69</span>
+              {/* 3 Bottles - selected by default */}
+              <div id="option3" className="bottle-option border-2 border-pink-600 bg-pink-100 text-pink-900 shadow-lg rounded-2xl p-6 text-center cursor-pointer hover:shadow-lg transition relative">
+                <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-yellow-300 text-yellow-900 text-xs font-bold px-4 py-1 rounded-full shadow-lg border-2 border-yellow-400 z-10">MOST POPULAR</div>
+                <div className="font-bold text-lg mt-2">3 Bottles</div>
+                <div className="mb-2">90 day supply</div>
+                <div className="text-2xl font-extrabold mb-1"><span className="line-through text-gray-400 text-lg mr-1">$207</span> <span id="price3">$119.00</span></div>
+                <div className="text-xs">Per Pack</div>
               </div>
-              <a
-                href="https://getserenitycore.com/cart/55530237624585:1"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-full bg-green-500 hover:bg-green-600 text-white font-bold py-4 rounded-full text-xl transition flex items-center justify-center gap-2 shadow mt-2 mb-2"
-                onClick={() => { if (typeof window !== 'undefined' && window.fbq) { window.fbq('track', 'AddToCart'); } }}
-              >
-                <span role="img" aria-label="cart">🛒</span> ADD TO CART
-              </a>
-              <div className="text-green-700 text-sm font-semibold flex items-center gap-2 mb-1"><span role="img" aria-label="guarantee">✅</span> 365-Day Money Back Guarantee</div>
-              <div className="w-full bg-yellow-100 border border-yellow-300 rounded-lg py-2 px-3 text-yellow-800 text-center text-xs font-semibold flex items-center justify-center gap-2 mt-2">
-                <span className="text-yellow-500">⏰</span> {timeLeft > 0 ? (<span>Ships today if ordered within <span className="font-bold">{formatTime(timeLeft)}</span></span>) : (<span className="font-bold">Shipping window closed</span>)}
+              {/* 6 Bottles - not selected by default */}
+              <div id="option6" className="bottle-option border-2 border-pink-300 rounded-2xl p-6 text-center cursor-pointer bg-white hover:shadow-lg transition relative text-pink-700">
+                <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-green-200 text-green-900 text-xs font-bold px-4 py-1 rounded-full shadow-lg border-2 border-green-400 z-10">BEST VALUE</div>
+                <div className="font-bold text-lg mt-2">6 Bottles</div>
+                <div className="mb-2">180 day supply</div>
+                <div className="text-2xl font-extrabold mb-1"><span className="line-through text-gray-400 text-lg mr-1">$414</span> <span id="price6">$149.00</span></div>
+                <div className="text-xs">Per Pack</div>
               </div>
             </div>
+            {/* Savings Message */}
+            <div id="savingsMsg" className="bg-pink-100 border border-pink-300 rounded-xl px-4 py-2 mb-4 text-pink-700 font-semibold text-center text-base shadow">
+              🎉 Congrats! You're saving <span id="savingsPercent">43%</span>
+            </div>
+            {/* Add to Cart Button */}
+            <button id="addToCartBtn" className="w-full bg-pink-600 hover:bg-pink-700 text-white font-bold py-4 rounded-full text-xl transition flex items-center justify-center gap-2 shadow-lg mt-2 mb-2">
+              ADD TO CART - <span id="cartPrice">$119.00</span>
+            </button>
           </div>
         </div>
       </section>

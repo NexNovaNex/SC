@@ -80,6 +80,7 @@ export default function RootLayout({
         <noscript>
           <img height="1" width="1" style={{display: 'none'}} src="https://www.facebook.com/tr?id=1030650302523455&ev=PageView&noscript=1" />
         </noscript>
+        <script src="/buybox.js"></script>
       </head>
       <body className={`${inter.className} bg-black bg-dotted-grid`}>{children}</body>
     </html>
