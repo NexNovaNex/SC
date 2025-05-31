@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import { useEffect, useRef, useState } from "react"
 import { Playfair_Display, Inter } from 'next/font/google'
+import Image from 'next/image'
 
 // Add this TypeScript declaration at the top, after imports
 // @ts-ignore
@@ -147,7 +148,7 @@ export default function Page() {
           {/* Right: Image */}
           <div className="flex-1 flex items-center justify-center">
             <div className="rounded-2xl overflow-hidden shadow-lg bg-white p-2">
-              <img src="/SC-placeholder.jpg" alt="Woman holding sc product" className="w-[340px] h-[420px] object-cover rounded-xl" />
+              <Image src="/SC-placeholder.jpg" alt="Woman holding sc product" className="w-[340px] h-[420px] object-cover rounded-xl" width={340} height={420} />
             </div>
           </div>
         </div>
@@ -160,7 +161,7 @@ export default function Page() {
           <div className="flex flex-col gap-4 mb-8">
             {/* Review 1 */}
             <div className="flex gap-3 bg-gray-50 rounded-2xl shadow p-2 md:p-4 items-start">
-              <img src="/profile1.jpg" alt="Tasha P." className="w-10 h-10 rounded-full object-cover" />
+              <Image src="/profile1.jpg" alt="Tasha P." className="w-10 h-10 rounded-full object-cover" width={40} height={40} />
               <div>
                 <div className="font-semibold text-gray-800">Tasha P.</div>
                 <div className="text-gray-700 text-sm">I used to dread going to bed — not because I wasn't tired, but because I knew the twitching would start. 2 weeks in and for the first time in forever, I actually fell asleep before midnight. I cried. Real, grateful tears 🥹</div>
@@ -168,7 +169,7 @@ export default function Page() {
             </div>
             {/* Review 2 */}
             <div className="flex gap-3 bg-gray-50 rounded-2xl shadow p-2 md:p-4 items-start">
-              <img src="/profile2.jpg" alt="Marie S." className="w-10 h-10 rounded-full object-cover" />
+              <Image src="/profile2.jpg" alt="Marie S." className="w-10 h-10 rounded-full object-cover" width={40} height={40} />
               <div>
                 <div className="font-semibold text-gray-800">Marie S.</div>
                 <div className="text-gray-700 text-sm">Tried every 'hack' I read online — magnesium, socks, leg rubs, even weird old wives' tricks. Nothing touched the restlessness. SerenityCore is the first thing that helped my *nights* feel normal again. Finally.</div>
@@ -176,7 +177,7 @@ export default function Page() {
             </div>
             {/* Review 3 */}
             <div className="flex gap-3 bg-gray-50 rounded-2xl shadow p-2 md:p-4 items-start">
-              <img src="/profile3.jpg" alt="Maya R." className="w-10 h-10 rounded-full object-cover" />
+              <Image src="/profile3.jpg" alt="Maya R." className="w-10 h-10 rounded-full object-cover" width={40} height={40} />
               <div>
                 <div className="font-semibold text-gray-800">Jillian F.</div>
                 <div className="text-gray-700 text-sm">It's not magic. It's just that I finally slept 4 nights in a row — next to my husband — without kicking him or pacing the floor. It's been years since I've felt this hopeful about sleep.</div>
@@ -184,7 +185,7 @@ export default function Page() {
                     </div>
             {/* Review 4 */}
             <div className="flex gap-3 bg-gray-50 rounded-2xl shadow p-2 md:p-4 items-start">
-              <img src="/profile4.jpg" alt="Elise M." className="w-10 h-10 rounded-full object-cover" />
+              <Image src="/profile4.jpg" alt="Elise M." className="w-10 h-10 rounded-full object-cover" width={40} height={40} />
                     <div>
                 <div className="font-semibold text-gray-800">Elise M.</div>
                 <div className="text-gray-700 text-sm">Why is no one talking about RLS like this?! I thought I was the only one who was up pacing at 2AM every night. This made me feel human again. And not crazy.😳🙌</div>
@@ -192,7 +193,7 @@ export default function Page() {
                             </div>
             {/* Review 5 */}
             <div className="flex gap-3 bg-gray-50 rounded-2xl shadow p-2 md:p-4 items-start">
-              <img src="/profile5.jpg" alt="Shannon R." className="w-10 h-10 rounded-full object-cover" />
+              <Image src="/profile5.jpg" alt="Shannon R." className="w-10 h-10 rounded-full object-cover" width={40} height={40} />
               <div>
                 <div className="font-semibold text-gray-800">Shannon R.</div>
                 <div className="text-gray-700 text-sm">It wasn't just the leg relief. It was waking up with energy. It was not feeling broken. SerenityCore gave me *me* back. That's what makes it worth it.</div>
@@ -210,7 +211,7 @@ export default function Page() {
           {/* Left: Story */}
           <div className="flex-1 min-w-0 flex flex-col items-start md:items-start">
             <div className="flex items-center gap-3 mb-2">
-              <img src="/founder-avatar.jpg" alt="Lina founder avatar" className="w-12 h-12 rounded-full object-cover border-2 border-pink-300" />
+              <Image src="/founder-avatar.jpg" alt="Lina founder avatar" className="w-12 h-12 rounded-full object-cover border-2 border-pink-300" width={48} height={48} />
               <span className="text-lg font-semibold text-pink-700">Hey, I'm Bella — I'm the one who started <span className='text-pink-600 font-bold'>SerenityCore.</span></span>
                         </div>
             <div className="text-gray-700 mb-4">
@@ -235,7 +236,7 @@ export default function Page() {
           {/* Right: Before/After */}
           <div className="flex-1 min-w-0 flex flex-col items-center justify-center md:items-center">
             <div className="bg-white rounded-2xl shadow-lg p-4 w-full max-w-xs mx-auto">
-              <img src="/before-after.jpg" alt="PCOS Hair Transformation" className="rounded-xl w-full object-cover mb-2" />
+              <Image src="/before-after.jpg" alt="PCOS Hair Transformation" className="rounded-xl w-full object-cover mb-2" width={400} height={300} />
               <div className="flex justify-between text-xs text-gray-500 mb-1">
                 <span>Before<br/>3 months ago</span>
                 <span>After<br/>Today</span>
@@ -292,7 +293,7 @@ export default function Page() {
             </div>
           </div>
           <div className="flex-1 flex justify-center">
-            <img src="/founder-avatar.jpg" alt="Root cause research" className="rounded-2xl shadow-lg w-full max-w-xs object-cover" />
+            <Image src="/founder-avatar.jpg" alt="Root cause research" className="rounded-2xl shadow-lg w-full max-w-xs object-cover" width={320} height={320} />
           </div>
         </div>
       </section>
@@ -304,37 +305,37 @@ export default function Page() {
           <div className="grid grid-cols-3 gap-3 md:gap-6 mb-8">
             {/* Saw Palmetto */}
             <div className="flex flex-col items-center text-center">
-              <img src="/ingredient-saw-palmetto.jpg" alt="Paeoniae Radix (Bai Shao)" className="w-24 h-24 md:w-28 md:h-28 rounded-full object-cover mb-2 md:mb-4 border-4 border-purple-200" />
+              <Image src="/ingredient-saw-palmetto.jpg" alt="Paeoniae Radix (Bai Shao)" className="w-24 h-24 md:w-28 md:h-28 rounded-full object-cover mb-2 md:mb-4 border-4 border-purple-200" width={96} height={96} />
               <div className="font-bold text-purple-800 mb-1">Paeoniae Radix (Bai Shao)</div>
               <div className="text-gray-700 text-sm">💤 Acts as a muscle relaxant and blood nourisher, traditionally used to reduce spasms and restore nighttime ease.</div>
             </div>
             {/* Myo + D-Chiro Inositol */}
             <div className="flex flex-col items-center text-center">
-              <img src="/ingredient-inositol.jpg" alt="L-Tyrosine" className="w-28 h-28 rounded-full object-cover mb-4 border-4 border-purple-200" />
+              <Image src="/ingredient-inositol.jpg" alt="L-Tyrosine" className="w-28 h-28 rounded-full object-cover mb-4 border-4 border-purple-200" width={112} height={112} />
               <div className="font-bold text-purple-800 mb-1">L-Tyrosine</div>
               <div className="text-gray-700 text-sm">🧠 Supports healthy dopamine levels — one of the most critical calming signals that goes missing in RLS sufferers at night.</div>
             </div>
             {/* Berberine */}
             <div className="flex flex-col items-center text-center">
-              <img src="/ingredient-berberine.jpg" alt="Angelica sinensis (Dang Gui)" className="w-28 h-28 rounded-full object-cover mb-4 border-4 border-purple-200" />
+              <Image src="/ingredient-berberine.jpg" alt="Angelica sinensis (Dang Gui)" className="w-28 h-28 rounded-full object-cover mb-4 border-4 border-purple-200" width={112} height={112} />
               <div className="font-bold text-purple-800 mb-1">Angelica sinensis (Dang Gui)</div>
               <div className="text-gray-700 text-sm">🌿 Enhances circulation and nourishes blood — used in traditional formulas to reduce stagnation and support calm legs.</div>
             </div>
             {/* Curcumin */}
             <div className="flex flex-col items-center text-center">
-              <img src="/ingredient-curcumin.jpg" alt="Ligusticum chuanxiong" className="w-28 h-28 rounded-full object-cover mb-4 border-4 border-purple-200" />
+              <Image src="/ingredient-curcumin.jpg" alt="Ligusticum chuanxiong" className="w-28 h-28 rounded-full object-cover mb-4 border-4 border-purple-200" width={112} height={112} />
               <div className="font-bold text-purple-800 mb-1">Ligusticum chuanxiong</div>
               <div className="text-gray-700 text-sm">💓 Promotes blood flow and helps clear tension in the lower limbs. Often used to support conditions involving restless movement.</div>
             </div>
             {/* Zinc */}
             <div className="flex flex-col items-center text-center">
-              <img src="/ingredient-zinc.jpg" alt="Bupleurum (Chai Hu)" className="w-28 h-28 rounded-full object-cover mb-4 border-4 border-purple-200" />
+              <Image src="/ingredient-zinc.jpg" alt="Bupleurum (Chai Hu)" className="w-28 h-28 rounded-full object-cover mb-4 border-4 border-purple-200" width={112} height={112} />
               <div className="font-bold text-purple-800 mb-1">Bupleurum (Chai Hu)</div>
               <div className="text-gray-700 text-sm">🔥 Helps regulate liver qi and relieve emotional tension — both contributors to the stress-induced flare-ups common in RLS.</div>
             </div>
             {/* New Ingredient */}
             <div className="flex flex-col items-center text-center">
-              <img src="/ingredient-placeholder.jpg" alt="Poria (Fu Ling)" className="w-28 h-28 rounded-full object-cover mb-4 border-4 border-purple-200" />
+              <Image src="/ingredient-placeholder.jpg" alt="Poria (Fu Ling)" className="w-28 h-28 rounded-full object-cover mb-4 border-4 border-purple-200" width={112} height={112} />
               <div className="font-bold text-purple-800 mb-1">Poria (Fu Ling)</div>
               <div className="text-gray-700 text-sm">🌙 Calms the Shen (spirit), promotes emotional stability, and supports fluid balance for uninterrupted, grounded sleep.</div>
             </div>
@@ -354,7 +355,7 @@ export default function Page() {
           </div>
           {/* Right: Image */}
           <div className="flex-1 flex justify-center items-center">
-            <img src="/root-cause-.jpg" alt="I got this" className="rounded-xl w-full max-w-xs object-cover" />
+            <Image src="/root-cause-.jpg" alt="I got this" className="rounded-xl w-full max-w-xs object-cover" width={320} height={320} />
           </div>
         </div>
       </section>
@@ -416,7 +417,7 @@ export default function Page() {
               <span className="text-purple-700 font-extrabold text-lg sm:text-xl md:text-2xl align-middle ml-2">Introducing...</span>
             </div>
             <div className="relative w-full max-w-xs sm:max-w-sm md:max-w-md aspect-[3/4] bg-gray-100 rounded-xl flex items-center justify-center mb-2 mx-auto">
-              <img src="/bottle-placeholder.png" alt="Product bottle" className="w-full h-auto object-contain rounded-xl" />
+              <Image src="/bottle-placeholder.png" alt="Product bottle" className="w-full h-auto object-contain rounded-xl" width={320} height={400} />
               <span className="absolute top-3 right-3 bg-pink-200 text-pink-700 text-xs font-bold px-3 py-1 rounded-full shadow">Clinically Tested</span>
             </div>
           </div>
@@ -597,7 +598,7 @@ export default function Page() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
             {/* Testimonial 1 */}
             <div className="flex flex-col md:flex-row items-center bg-white rounded-2xl shadow p-3 md:p-6 gap-4 md:gap-6">
-              <img src="/profile2.jpg" alt="Layla M." className="w-32 h-32 object-cover rounded-xl mb-4 md:mb-0" />
+              <Image src="/profile2.jpg" alt="Layla M." className="w-32 h-32 object-cover rounded-xl mb-4 md:mb-0" width={128} height={128} />
               <div className="flex-1">
                 <div className="flex gap-1 mb-1">{[...Array(5)].map((_, i) => (<span key={i} className="text-yellow-400 text-lg">★</span>))}</div>
                 <div className="font-bold text-pink-600 mb-1 flex items-center gap-2"><span role="img" aria-label="quote">🗣️</span> "I used to lie awake crying at 2AM… now I sleep through the night without pacing."</div>
@@ -613,11 +614,11 @@ export default function Page() {
                 <div className="font-semibold text-gray-700 mb-1">- Dena M.</div>
                 <div className="text-gray-600 text-sm">""I didn't even realize how bad it had gotten. I'd wake up ashamed and exhausted. Now I sleep through most nights. My body's still, my mind's quiet. I feel human again."</div>
               </div>
-              <img src="/profile3.jpg" alt="Rina D." className="w-32 h-32 object-cover rounded-xl mb-4 md:mb-0 order-1 md:order-2" />
+              <Image src="/profile3.jpg" alt="Rina D." className="w-32 h-32 object-cover rounded-xl mb-4 md:mb-0 order-1 md:order-2" width={128} height={128} />
             </div>
             {/* Testimonial 3 */}
             <div className="flex flex-col md:flex-row items-center bg-white rounded-2xl shadow p-3 md:p-6 gap-4 md:gap-6">
-              <img src="/profile1.jpg" alt="Samira F." className="w-32 h-32 object-cover rounded-xl mb-4 md:mb-0" />
+              <Image src="/profile1.jpg" alt="Samira F." className="w-32 h-32 object-cover rounded-xl mb-4 md:mb-0" width={128} height={128} />
               <div className="flex-1">
                 <div className="flex gap-1 mb-1">{[...Array(5)].map((_, i) => (<span key={i} className="text-yellow-400 text-lg">★</span>))}</div>
                 <div className="font-bold text-pink-600 mb-1 flex items-center gap-2"><span role="img" aria-label="quote">🗣️</span> "I used to try everything — magnesium, socks, hot baths. Nothing worked longer than a week. SerenityCore is different."</div>
@@ -633,7 +634,7 @@ export default function Page() {
                 <div className="font-semibold text-gray-700 mb-1">- Linda T.</div>
                 <div className="text-gray-600 text-sm">"This isn't a magic cure. But my legs don't jolt like they used to. And when I wake up now, I feel like me. That's something I didn't think I'd get back."</div>
               </div>
-              <img src="/profile4.jpg" alt="Placeholder" className="w-32 h-32 object-cover rounded-xl mb-4 md:mb-0 order-1 md:order-2" />
+              <Image src="/profile4.jpg" alt="Placeholder" className="w-32 h-32 object-cover rounded-xl mb-4 md:mb-0 order-1 md:order-2" width={128} height={128} />
             </div>
           </div>
         </div>
@@ -644,7 +645,7 @@ export default function Page() {
           <div className="w-full bg-purple-700 rounded-2xl flex flex-row items-center p-3 md:p-8 mb-6">
             {/* Image and badge */}
             <div className="relative w-24 h-24 bg-white/20 rounded-xl flex items-center justify-center mr-6">
-              <img src="/bottle-placeholder.png" alt="Limited Supply" className="w-16 h-16 object-contain" />
+              <Image src="/bottle-placeholder.png" alt="Limited Supply" className="w-16 h-16 object-contain" width={64} height={64} />
               <span className="absolute top-2 left-2 bg-pink-200 text-pink-700 text-xs font-bold px-2 py-1 rounded-full shadow">Limited Supply</span>
             </div>
             {/* Text */}
@@ -720,7 +721,7 @@ export default function Page() {
             Why People With RLS Have Been <span className="text-pink-500">LET DOWN</span> For Years…
           </h2>
           <div className="flex flex-col md:flex-row gap-8 mb-8 items-center">
-            <img src="/letdown1.jpg" alt="RLS story" className="w-48 h-48 object-cover rounded-xl grayscale" />
+            <Image src="/letdown1.jpg" alt="RLS story" className="w-48 h-48 object-cover rounded-xl grayscale" width={192} height={192} />
             <div className="bg-pink-50 rounded-xl p-3 md:p-6 flex-1 text-gray-800 shadow">
               <style jsx>{`
                 .letdown-strong-text { color: #1a1a1a; }
@@ -805,7 +806,7 @@ export default function Page() {
             <div className="text-lg text-pink-500 mb-4 font-semibold">Limited Time Offer</div>
             {/* Product Image */}
             <div className="flex justify-center mb-6">
-              <img src="/bottle-placeholder.jpg" alt="Product bottle" className="w-32 h-40 md:w-40 md:h-52 object-contain rounded-xl shadow-lg border-4 border-pink-100 bg-white" />
+              <Image src="/bottle-placeholder.jpg" alt="Product bottle" className="w-32 h-40 md:w-40 md:h-52 object-contain rounded-xl shadow-lg border-4 border-pink-100 bg-white" width={128} height={160} />
             </div>
             {/* Toggle */}
             <div className="flex flex-col items-center mb-2">

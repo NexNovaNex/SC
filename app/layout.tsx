@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Inter, Playfair_Display } from "next/font/google";
 import "./globals.css";
+import Script from "next/script";
+import Image from 'next/image'
 
 const playfair = Playfair_Display({ 
   subsets: ['latin'],
@@ -78,9 +80,10 @@ export default function RootLayout({
           fbq('track', 'PageView');
         `}} />
         <noscript>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
           <img height="1" width="1" style={{display: 'none'}} src="https://www.facebook.com/tr?id=1030650302523455&ev=PageView&noscript=1" />
         </noscript>
-        <script src="/buybox.js"></script>
+        <Script src="/buybox.js" strategy="afterInteractive" />
       </head>
       <body className={`${inter.className} bg-black bg-dotted-grid`}>{children}</body>
     </html>
