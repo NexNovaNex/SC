@@ -5,6 +5,7 @@ import Link from "next/link"
 import { useEffect, useRef, useState } from "react"
 import { Playfair_Display, Inter } from 'next/font/google'
 import Image from 'next/image'
+import BuyBox from '../components/BuyBox';
 
 // Add this TypeScript declaration at the top, after imports
 // @ts-ignore
@@ -799,83 +800,7 @@ export default function Page() {
           </div>
         </section>
       {/* Pricing/Package Choice Section */}
-      <section id="pricing-section" className="w-full flex flex-col items-center bg-white py-8 md:py-16 px-2 md:px-4">
-        <div className="max-w-3xl w-full mx-auto rounded-2xl shadow-2xl bg-gradient-to-br from-pink-50 via-white to-purple-50 border-2 border-pink-200 p-0 md:p-0">
-          <div className="px-6 md:px-12 pt-8 pb-4 text-center">
-            <h2 className="text-3xl md:text-4xl font-extrabold text-pink-700 mb-2">Natural Formula for RlS Sufferers</h2>
-            <div className="text-lg text-pink-500 mb-4 font-semibold">Limited Time Offer</div>
-            {/* Product Image */}
-            <div className="flex justify-center mb-6">
-              <Image src="/bottle-placeholder.jpg" alt="Product bottle" className="w-32 h-40 md:w-40 md:h-52 object-contain rounded-xl shadow-lg border-4 border-pink-100 bg-white" width={128} height={160} />
-            </div>
-            {/* Toggle */}
-            <div className="flex flex-col items-center mb-2">
-              <div className="flex items-center gap-2 rounded-full p-1 border-2 border-pink-300 bg-white">
-                <button id="buyOnceBtn" className="buy-toggle px-6 py-2 rounded-full font-bold border-2 transition bg-gray-100 text-pink-700 border-pink-300">Buy Once</button>
-                <button id="subscribeBtn" className="buy-toggle px-6 py-2 rounded-full font-bold border-2 transition bg-pink-600 text-white border-pink-600">Subscribe & Save <span id="savePercent">43%</span></button>
-              </div>
-              {/* Features/Benefits Box */}
-              <div className="w-full max-w-lg mx-auto mt-2">
-                <ul id="benefitsList" className="border-2 border-pink-200 bg-white rounded-xl px-6 py-4 grid grid-cols-1 gap-2 text-base font-medium shadow">
-                  <li className="flex items-center justify-between gap-2" data-benefit="discount">
-                    <span className="flex items-center gap-2 text-green-600 font-bold">✔ 30% off for life</span>
-                    <span className="line-through text-pink-400">$20</span>
-                  </li>
-                  <li className="flex items-center justify-between gap-2" data-benefit="tracker">
-                    <span className="flex items-center gap-2 text-pink-600">🎁 <span className="font-bold">FREE</span> Sleep Recovery Tracker</span>
-                    <span className="line-through text-pink-400">$18</span>
-                  </li>
-                  <li className="flex items-center justify-between gap-2" data-benefit="audio">
-                    <span className="flex items-center gap-2 text-pink-600">🎧 <span className="font-bold">FREE</span> RLS Relief Audio Guide</span>
-                    <span className="line-through text-pink-400">$21</span>
-                  </li>
-                  <li className="flex items-center justify-between gap-2" data-benefit="shipping">
-                    <span className="flex items-center gap-2 text-pink-600">🚚 <span className="font-bold">FREE</span> Priority Shipping</span>
-                    <span className="line-through text-pink-400">$9</span>
-                  </li>
-                  <li className="flex items-center gap-2" data-benefit="vip">
-                    <span className="flex items-center gap-2 text-green-600 font-bold">✔ VIP Access to New Wellness Tools</span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            {/* Bottle Options */}
-            <div className="grid grid-cols-3 gap-3 md:gap-6 mb-6">
-              {/* 1 Bottle - not selected by default */}
-              <div id="option1" className="bottle-option border-2 border-pink-300 rounded-2xl p-6 text-center cursor-pointer bg-white hover:shadow-lg transition relative text-pink-700">
-                <div className="font-bold text-lg">1 Bottle</div>
-                <div className="mb-2">30 day supply</div>
-                <div className="text-2xl font-extrabold mb-1 break-words md:text-2xl text-xl"><span className="line-through text-gray-400 text-lg mr-1">$69</span> <span id="price1">$49</span></div>
-                <div className="text-xs">Per Bottle</div>
-              </div>
-              {/* 3 Bottles - selected by default */}
-              <div id="option3" className="bottle-option border-2 border-pink-600 bg-pink-100 text-pink-900 shadow-lg rounded-2xl p-6 text-center cursor-pointer hover:shadow-lg transition relative">
-                <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-yellow-300 text-yellow-900 text-xs font-bold px-4 py-1 rounded-full shadow-lg border-2 border-yellow-400 z-10">MOST POPULAR</div>
-                <div className="font-bold text-lg mt-2">3 Bottles</div>
-                <div className="mb-2">90 day supply</div>
-                <div className="text-2xl font-extrabold mb-1 break-words md:text-2xl text-xl"><span className="line-through text-gray-400 text-lg mr-1">$207</span> <span id="price3">$119</span></div>
-                <div className="text-xs">Per Pack</div>
-              </div>
-              {/* 6 Bottles - not selected by default */}
-              <div id="option6" className="bottle-option border-2 border-pink-300 rounded-2xl p-6 text-center cursor-pointer bg-white hover:shadow-lg transition relative text-pink-700">
-                <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-green-200 text-green-900 text-xs font-bold px-4 py-1 rounded-full shadow-lg border-2 border-green-400 z-10">BEST VALUE</div>
-                <div className="font-bold text-lg mt-2">6 Bottles</div>
-                <div className="mb-2">180 day supply</div>
-                <div className="text-2xl font-extrabold mb-1 break-words md:text-2xl text-xl"><span className="line-through text-gray-400 text-lg mr-1">$414</span> <span id="price6">$149</span></div>
-                <div className="text-xs">Per Pack</div>
-              </div>
-            </div>
-            {/* Savings Message */}
-            <div id="savingsMsg" className="bg-pink-100 border border-pink-300 rounded-xl px-4 py-2 mb-4 text-pink-700 font-semibold text-center text-base shadow">
-              🎉 Congrats! You're saving <span id="savingsPercent">43%</span>
-            </div>
-            {/* Add to Cart Button */}
-            <button id="addToCartBtn" className="w-full bg-pink-600 hover:bg-pink-700 text-white font-bold py-4 rounded-full text-xl transition flex items-center justify-center gap-2 shadow-lg mt-2 mb-2">
-              ADD TO CART - <span id="cartPrice">$119.00</span>
-            </button>
-          </div>
-        </div>
-      </section>
+      <BuyBox />
       {/* Footer */}
       <footer className="w-full bg-white border-t border-gray-200 py-4 md:py-8 mt-8">
         <div className="max-w-4xl mx-auto px-4 text-center text-xs text-gray-500">
