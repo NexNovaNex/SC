@@ -31,6 +31,17 @@ const BuyBox = () => {
   const priceData = pricing[mode][bottles as 1 | 3 | 6];
   const showSavings = priceData.percent > 0;
 
+  const handleAddToCart = () => {
+    if (typeof window !== 'undefined' && window.fbq) {
+      window.fbq('track', 'AddToCart', {
+        value: priceData.price,
+        currency: 'USD',
+        contents: [{ id: `${mode}-${bottles}`, quantity: 1 }],
+        content_type: 'product',
+      });
+    }
+  };
+
   return (
     <section id="pricing-section" className="w-full flex flex-col items-center bg-white py-8 md:py-16 px-2 md:px-4">
       <div className="max-w-3xl w-full mx-auto rounded-2xl shadow-2xl bg-gradient-to-br from-pink-50 via-white to-purple-50 border-2 border-pink-200 p-0 md:p-0">
@@ -121,6 +132,7 @@ const BuyBox = () => {
             id="addToCartBtn"
             className="w-full bg-pink-600 hover:bg-pink-700 text-white font-bold py-4 rounded-full text-xl transition flex items-center justify-center gap-2 shadow-lg mt-2 mb-2"
             href={checkoutLinks[mode][bottles as 1 | 3 | 6]}
+            onClick={handleAddToCart}
           >
             ADD TO CART - <span id="cartPrice">${priceData.price}</span>
           </a>
