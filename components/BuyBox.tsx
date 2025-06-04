@@ -14,14 +14,14 @@ const pricing = {
 };
 const checkoutLinks = {
   subscribe: {
-    1: 'https://getserenitycore.com/tools/recurring/checkout_link?magic=eyJpdGVtcyI6IFt7ImlkIjogNTU1MzAyMzc2MjQ1ODUsICJxdWFudGl0eSI6IDEsICJzZWxsaW5nX3BsYW4iOiA2ODkwOTkyMTEwMTcsICJzZWxsaW5nX3BsYW5fZ3JvdXBfaWQiOiA3NzA4NTM0NDAwOX1dfQ==&store_id=200246',
-    3: 'https://getserenitycore.com/tools/recurring/checkout_link?magic=eyJpdGVtcyI6IFt7ImlkIjogNTU1OTIxNTAxMzkxNDUsICJxdWFudGl0eSI6IDEsICJzZWxsaW5nX3BsYW4iOiA2ODkxMjc0NTcwMzMsICJzZWxsaW5nX3BsYW5fZ3JvdXBfaWQiOiA3NzExMDAxODMxM31dfQ==&store_id=200246',
-    6: 'https://getserenitycore.com/tools/recurring/checkout_link?magic=eyJpdGVtcyI6IFt7ImlkIjogNTU1OTIxNTgwNjkwMDEsICJxdWFudGl0eSI6IDEsICJzZWxsaW5nX3BsYW4iOiA2ODkxMjc0ODk4MDEsICJzZWxsaW5nX3BsYW5fZ3JvdXBfaWQiOiA3NzExMDA1MTA4MX1dfQ==&store_id=200246'
+    1: 'https://h515q5-yu.myshopify.com/a/subscriptions/checkout/51874030747923:1:691307708691',
+    3: 'https://h515q5-yu.myshopify.com/a/subscriptions/checkout/51874031141139:1:691307741459',
+    6: 'https://h515q5-yu.myshopify.com/a/subscriptions/checkout/51874034483475:1:691307774227'
   },
   once: {
-    1: 'https://getserenitycore.com/cart/55530237624585:1',
-    3: 'https://getserenitycore.com/cart/55592150139145:1',
-    6: 'http://getserenitycore.com/cart/55592158069001:1'
+    1: 'https://bio-gums.com/cart/10017704608019:1',
+    3: 'https://bio-gums.com/cart/51874031141139:1',
+    6: 'https://bio-gums.com/cart/51874034483475:1'
   }
 };
 
