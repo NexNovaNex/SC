@@ -3,14 +3,14 @@
 document.addEventListener('DOMContentLoaded', function () {
   const pricing = {
     subscribe: {
-      1: { price: 37, old: 52, percent: 29 },
-      3: { price: 92, old: 156, percent: 43 },
-      6: { price: 113, old: 315, percent: 64 }
+      1: { price: 49, old: 69, percent: 29 },
+      3: { price: 119, old: 207, percent: 43 },
+      6: { price: 149, old: 414, percent: 64 }
     },
     once: {
-      1: { price: 52, old: 52, percent: 0 },
-      3: { price: 113, old: 156, percent: 29 },
-      6: { price: 165, old: 315, percent: 47 }
+      1: { price: 69, old: 69, percent: 0 },
+      3: { price: 147, old: 207, percent: 29 },
+      6: { price: 219, old: 414, percent: 47 }
     }
   };
   const benefits = {
@@ -112,9 +112,9 @@ document.addEventListener('DOMContentLoaded', function () {
     const price1 = document.getElementById('price1');
     const price3 = document.getElementById('price3');
     const price6 = document.getElementById('price6');
-    if (price1) price1.innerText = `£${pricing[mode][1].price}`;
-    if (price3) price3.innerText = `£${pricing[mode][3].price}`;
-    if (price6) price6.innerText = `£${pricing[mode][6].price}`;
+    if (price1) price1.innerText = `$${pricing[mode][1].price}`;
+    if (price3) price3.innerText = `$${pricing[mode][3].price}`;
+    if (price6) price6.innerText = `$${pricing[mode][6].price}`;
     // Option highlight
     [1,3,6].forEach(n => {
       const el = document.getElementById(`option${n}`);
@@ -142,7 +142,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
     // Cart price
     const cartPrice = document.getElementById('cartPrice');
-    if (cartPrice) cartPrice.innerText = `£${pricing[mode][bottles].price}`;
+    if (cartPrice) cartPrice.innerText = `$${pricing[mode][bottles].price}`;
     // Update Add to Cart button link
     const addToCartBtn = document.getElementById('addToCartBtn');
     if (addToCartBtn) {
