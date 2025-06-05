@@ -2,14 +2,14 @@ import React, { useState } from 'react';
 
 const pricing = {
   subscribe: {
-    1: { price: 49, old: 69, percent: 29 },
-    3: { price: 119, old: 207, percent: 43 },
-    6: { price: 149, old: 414, percent: 64 }
+    1: { price: 37, old: 52, percent: 29 },
+    3: { price: 92, old: 156, percent: 43 },
+    6: { price: 113, old: 315, percent: 64 }
   },
   once: {
-    1: { price: 69, old: 69, percent: 0 },
-    3: { price: 147, old: 207, percent: 29 },
-    6: { price: 219, old: 414, percent: 47 }
+    1: { price: 52, old: 52, percent: 0 },
+    3: { price: 113, old: 156, percent: 29 },
+    6: { price: 165, old: 315, percent: 47 }
   }
 };
 const checkoutLinks = {
@@ -35,7 +35,7 @@ const BuyBox = () => {
     if (typeof window !== 'undefined' && window.fbq) {
       window.fbq('track', 'AddToCart', {
         value: priceData.price,
-        currency: 'USD',
+        currency: 'GBP',
         contents: [{ id: `${mode}-${bottles}`, quantity: 1 }],
         content_type: 'product',
       });
@@ -75,19 +75,19 @@ const BuyBox = () => {
               <ul id="benefitsList" className="border-2 border-pink-200 bg-white rounded-xl px-6 py-4 grid grid-cols-1 gap-2 text-base font-medium shadow">
                 <li className={`flex items-center justify-between gap-2 ${mode === 'once' ? 'line-through text-gray-400 opacity-60' : ''}`} data-benefit="discount">
                   <span className={`flex items-center gap-2 ${mode === 'once' ? 'text-gray-400' : 'text-green-600 font-bold'}`}>✔ 30% off for life</span>
-                  <span className="line-through text-pink-400">$20</span>
+                  <span className="line-through text-pink-400">£16</span>
                 </li>
                 <li className={`flex items-center justify-between gap-2 ${mode === 'once' ? 'line-through text-gray-400 opacity-60' : ''}`} data-benefit="tracker">
                   <span className={`flex items-center gap-2 ${mode === 'once' ? 'text-gray-400' : 'text-pink-600'}`}>🎁 <span className="font-bold">FREE</span> Sleep Recovery Tracker</span>
-                  <span className="line-through text-pink-400">$18</span>
+                  <span className="line-through text-pink-400">£14</span>
                 </li>
                 <li className={`flex items-center justify-between gap-2 ${mode === 'once' ? 'line-through text-gray-400 opacity-60' : ''}`} data-benefit="audio">
                   <span className={`flex items-center gap-2 ${mode === 'once' ? 'text-gray-400' : 'text-pink-600'}`}>🎧 <span className="font-bold">FREE</span> RLS Relief Audio Guide</span>
-                  <span className="line-through text-pink-400">$21</span>
+                  <span className="line-through text-pink-400">£17</span>
                 </li>
                 <li className={`flex items-center justify-between gap-2 ${mode === 'once' ? 'line-through text-gray-400 opacity-60' : ''}`} data-benefit="shipping">
                   <span className={`flex items-center gap-2 ${mode === 'once' ? 'text-gray-400' : 'text-pink-600'}`}>🚚 <span className="font-bold">FREE</span> Priority Shipping</span>
-                  <span className="line-through text-pink-400">$9</span>
+                  <span className="line-through text-pink-400">£7</span>
                 </li>
                 <li className={`flex items-center gap-2 ${mode === 'once' ? 'line-through text-gray-400 opacity-60' : ''}`} data-benefit="vip">
                   <span className={`flex items-center gap-2 ${mode === 'once' ? 'text-gray-400' : 'text-green-600 font-bold'}`}>✔ VIP Access to New Wellness Tools</span>
@@ -115,7 +115,7 @@ const BuyBox = () => {
                 <div className="font-bold text-lg">{n} Bottle{n > 1 ? 's' : ''}</div>
                 <div className="mb-2">{n * 30} day supply</div>
                 <div className="text-2xl font-extrabold mb-1 break-words md:text-2xl text-xl">
-                  <span className="line-through text-gray-400 text-lg mr-1">${pricing[mode][n as 1 | 3 | 6].old}</span> <span id={`price${n}`}>${pricing[mode][n as 1 | 3 | 6].price}</span>
+                  <span className="line-through text-gray-400 text-lg mr-1">£{pricing[mode][n as 1 | 3 | 6].old}</span> <span id={`price${n}`}>£{pricing[mode][n as 1 | 3 | 6].price}</span>
                 </div>
                 <div className="text-xs">Per {n > 1 ? 'Pack' : 'Bottle'}</div>
               </div>
@@ -134,7 +134,7 @@ const BuyBox = () => {
             href={checkoutLinks[mode][bottles as 1 | 3 | 6]}
             onClick={handleAddToCart}
           >
-            ADD TO CART - <span id="cartPrice">${priceData.price}</span>
+            ADD TO CART - <span id="cartPrice">£{priceData.price}</span>
           </a>
         </div>
       </div>
