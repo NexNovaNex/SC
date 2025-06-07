@@ -2,14 +2,14 @@ import React, { useState } from 'react';
 
 const pricing = {
   subscribe: {
-    1: { price: 52, old: 52, percent: 29 },
-    3: { price: 156, old: 156, percent: 43 },
-    6: { price: 315, old: 315, percent: 64 }
+    1: { price: 22.50, old: 37, percent: 39 },
+    3: { price: 61, old: 111, percent: 45 },
+    6: { price: 114, old: 222, percent: 49 }
   },
   once: {
-    1: { price: 52, old: 52, percent: 0 },
-    3: { price: 156, old: 156, percent: 29 },
-    6: { price: 315, old: 315, percent: 47 }
+    1: { price: 30, old: 37, percent: 19 },
+    3: { price: 83, old: 111, percent: 25 },
+    6: { price: 151, old: 222, percent: 32 }
   }
 };
 const checkoutLinks = {
@@ -35,7 +35,7 @@ const BuyBox = () => {
     if (typeof window !== 'undefined' && window.fbq) {
       window.fbq('track', 'AddToCart', {
         value: priceData.price,
-        currency: 'USD',
+        currency: 'GBP',
         contents: [{ id: `${mode}-${bottles}`, quantity: 1 }],
         content_type: 'product',
       });
@@ -115,7 +115,7 @@ const BuyBox = () => {
                 <div className="font-bold text-lg">{n} Bottle{n > 1 ? 's' : ''}</div>
                 <div className="mb-2">{n * 30} day supply</div>
                 <div className="text-2xl font-extrabold mb-1 break-words md:text-2xl text-xl">
-                  <span className="line-through text-gray-400 text-lg mr-1">${pricing[mode][n as 1 | 3 | 6].old}</span> <span id={`price${n}`}>${pricing[mode][n as 1 | 3 | 6].price}</span>
+                  <span className="line-through text-gray-400 text-lg mr-1">£{pricing[mode][n as 1 | 3 | 6].old}</span> <span id={`price${n}`}>£{pricing[mode][n as 1 | 3 | 6].price}</span>
                 </div>
                 <div className="text-xs">Per {n > 1 ? 'Pack' : 'Bottle'}</div>
               </div>
@@ -134,7 +134,7 @@ const BuyBox = () => {
             href={checkoutLinks[mode][bottles as 1 | 3 | 6]}
             onClick={handleAddToCart}
           >
-            ADD TO CART - <span id="cartPrice">${priceData.price}</span>
+            ADD TO CART - <span id="cartPrice">£{priceData.price}</span>
           </a>
         </div>
       </div>
