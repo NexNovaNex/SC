@@ -147,7 +147,7 @@ export default function Page() {
             </div>
           </div>
           {/* Right: Image */}
-          <div className="flex-1 flex items-center justify-center">
+          <div className="flex-1 flex items-center justify-center order-first md:order-last">
             <div className="rounded-2xl overflow-hidden shadow-lg bg-white p-2">
               <Image src="/SC-placeholder.jpg" alt="Woman holding sc product" className="w-[340px] h-[420px] object-cover rounded-xl" width={340} height={420} />
             </div>
