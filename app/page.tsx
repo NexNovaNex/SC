@@ -91,65 +91,80 @@ export default function Page() {
   return (
     <div>
       <div className="bg-gradient-to-r from-pink-50 to-white">
-        <div className="max-w-6xl w-full mx-auto flex flex-col md:flex-row items-center gap-8 px-2 md:px-4 pt-0 md:pt-0 pb-6 md:pb-16">
-          {/* Left: Text Content */}
-          <div className="flex-1 max-w-xl">
+        <div className="max-w-6xl w-full mx-auto flex flex-col px-2 md:px-4 pt-0 md:pt-0 pb-6 md:pb-16">
+          {/* Main Headline */}
+          <div className="mb-6">
             <h1 className="text-3xl md:text-4xl font-bold leading-tight mb-4 text-gray-900">
               If You're Still Awake at 3AM With <span className="text-pink-600 font-extrabold">RLS</span> — <span className="text-pink-500 italic">Rubbing Your Legs</span>, Watching the Clock, and Wondering Why <span className="text-pink-400 underline">Nothing's Working</span>… I've Been There.
             </h1>
-            <div className="flex items-center gap-2 text-pink-600 font-medium mb-2">
-              <span className="text-lg">❤️</span>
-              The First Formula Specifically Created to Calm Restless Legs at the True Source
-            </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 my-6">
-              <div className="bg-white rounded-2xl shadow p-4 flex items-start gap-3 border border-pink-200">
-                <span className="text-2xl mt-1">🧬</span>
-                <div>
-                  <div className="font-semibold text-gray-900"> Made Specifically for RLS Sufferers*</div>
-                  <div className="text-gray-500 text-sm">Targets the neurological misfires behind RLS — not just the leg symptoms.</div>
-                </div>
-              </div>
-              <div className="bg-white rounded-2xl shadow p-4 flex items-start gap-3 border border-pink-200">
-                <span className="text-2xl mt-1">🧖‍♀️</span>
-                <div>
-                  <div className="font-semibold text-gray-900">Fewer Nighttime Jolts*</div>
-                  <div className="text-gray-500 text-sm">No more kicking, pacing, or sleepless nights.</div>
-                </div>
-              </div>
-              <div className="bg-white rounded-2xl shadow p-4 flex items-start gap-3 border border-pink-200">
-                <span className="text-2xl mt-1">🌸</span>
-                <div>
-                  <div className="font-semibold text-gray-900">Sleep More Peacefully*</div>
-                  <div className="text-gray-500 text-sm">Calmer nerves. More stillness. Better rest</div>
-                </div>
-              </div>
-              <div className="bg-white rounded-2xl shadow p-4 flex items-start gap-3 border border-pink-200">
-                <span className="text-2xl mt-1">🌱</span>
-                <div>
-                  <div className="font-semibold text-gray-900">Relief from Within*</div>
-                  <div className="text-gray-500 text-sm">Supports brain-body balance so your legs stay still and calm.</div>
-                </div>
-              </div>
-            </div>
-            <div className="bg-pink-50 border border-pink-200 rounded-xl px-4 py-3 mb-4 text-pink-700 font-semibold text-center">
-              Feel Like Yourself Again*<br/>
-              <span className="text-pink-500 font-normal">More energy. More clarity. More you.</span>
-            </div>
-            <div className="text-xs text-gray-400 mb-4">Backed by clinical insights into dopamine, glutamate, and circadian rhythm disruption.</div>
-            <div className="flex justify-center mb-6">
-              <button className="bg-pink-500 hover:bg-pink-600 text-white font-bold py-3 px-8 rounded-full text-lg transition w-full md:w-auto" onClick={() => document.getElementById('pricing-section')?.scrollIntoView({ behavior: 'smooth' })}>Start Calming the Chaos From Within</button>
-            </div>
-            <div className="flex flex-wrap gap-4 text-xs text-gray-500 items-center justify-center md:justify-center mt-2">
-              <div className="flex items-center gap-1"><span className="text-lg">🧬</span> Formulated for RLS</div>
-              <div className="flex items-center gap-1"><span className="text-lg">🔬</span> Neuroscience-Inspired</div>
-              <div className="flex items-center gap-1"><span className="text-lg">🚫</span> Non-Sedating, Drug-Free</div>
-              <div className="flex items-center gap-1"><span className="text-lg">🇺🇸</span> Made in the USA</div>
+          </div>
+
+          {/* Image - Shows on mobile, hidden on desktop */}
+          <div className="block md:hidden mb-6">
+            <div className="rounded-2xl overflow-hidden shadow-lg bg-white p-2 max-w-sm mx-auto">
+              <Image src="/SC-placeholder.jpg" alt="Woman holding sc product" className="w-full h-[420px] object-cover rounded-xl" width={340} height={420} />
             </div>
           </div>
-          {/* Right: Image */}
-          <div className="flex-1 flex items-center justify-center order-last md:order-first">
-            <div className="rounded-2xl overflow-hidden shadow-lg bg-white p-2">
-              <Image src="/SC-placeholder.jpg" alt="Woman holding sc product" className="w-[340px] h-[420px] object-cover rounded-xl" width={340} height={420} />
+
+          {/* Content Section */}
+          <div className="flex flex-col md:flex-row gap-8">
+            {/* Left: Text Content */}
+            <div className="flex-1 max-w-xl">
+              <div className="flex items-center gap-2 text-pink-600 font-medium mb-2">
+                <span className="text-lg">❤️</span>
+                The First Formula Specifically Created to Calm Restless Legs at the True Source
+              </div>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 my-6">
+                <div className="bg-white rounded-2xl shadow p-4 flex items-start gap-3 border border-pink-200">
+                  <span className="text-2xl mt-1">🧬</span>
+                  <div>
+                    <div className="font-semibold text-gray-900"> Made Specifically for RLS Sufferers*</div>
+                    <div className="text-gray-500 text-sm">Targets the neurological misfires behind RLS — not just the leg symptoms.</div>
+                  </div>
+                </div>
+                <div className="bg-white rounded-2xl shadow p-4 flex items-start gap-3 border border-pink-200">
+                  <span className="text-2xl mt-1">🧖‍♀️</span>
+                  <div>
+                    <div className="font-semibold text-gray-900">Fewer Nighttime Jolts*</div>
+                    <div className="text-gray-500 text-sm">No more kicking, pacing, or sleepless nights.</div>
+                  </div>
+                </div>
+                <div className="bg-white rounded-2xl shadow p-4 flex items-start gap-3 border border-pink-200">
+                  <span className="text-2xl mt-1">🌸</span>
+                  <div>
+                    <div className="font-semibold text-gray-900">Sleep More Peacefully*</div>
+                    <div className="text-gray-500 text-sm">Calmer nerves. More stillness. Better rest</div>
+                  </div>
+                </div>
+                <div className="bg-white rounded-2xl shadow p-4 flex items-start gap-3 border border-pink-200">
+                  <span className="text-2xl mt-1">🌱</span>
+                  <div>
+                    <div className="font-semibold text-gray-900">Relief from Within*</div>
+                    <div className="text-gray-500 text-sm">Supports brain-body balance so your legs stay still and calm.</div>
+                  </div>
+                </div>
+              </div>
+              <div className="bg-pink-50 border border-pink-200 rounded-xl px-4 py-3 mb-4 text-pink-700 font-semibold text-center">
+                Feel Like Yourself Again*<br/>
+                <span className="text-pink-500 font-normal">More energy. More clarity. More you.</span>
+              </div>
+              <div className="text-xs text-gray-400 mb-4">Backed by clinical insights into dopamine, glutamate, and circadian rhythm disruption.</div>
+              <div className="flex justify-center mb-6">
+                <button className="bg-pink-500 hover:bg-pink-600 text-white font-bold py-3 px-8 rounded-full text-lg transition w-full md:w-auto" onClick={() => document.getElementById('pricing-section')?.scrollIntoView({ behavior: 'smooth' })}>Start Calming the Chaos From Within</button>
+              </div>
+              <div className="flex flex-wrap gap-4 text-xs text-gray-500 items-center justify-center md:justify-center mt-2">
+                <div className="flex items-center gap-1"><span className="text-lg">🧬</span> Formulated for RLS</div>
+                <div className="flex items-center gap-1"><span className="text-lg">🔬</span> Neuroscience-Inspired</div>
+                <div className="flex items-center gap-1"><span className="text-lg">🚫</span> Non-Sedating, Drug-Free</div>
+                <div className="flex items-center gap-1"><span className="text-lg">🇺🇸</span> Made in the USA</div>
+              </div>
+            </div>
+
+            {/* Right: Image - Hidden on mobile, shows on desktop */}
+            <div className="hidden md:flex flex-1 items-center justify-center">
+              <div className="rounded-2xl overflow-hidden shadow-lg bg-white p-2">
+                <Image src="/SC-placeholder.jpg" alt="Woman holding sc product" className="w-[340px] h-[420px] object-cover rounded-xl" width={340} height={420} />
+              </div>
             </div>
           </div>
         </div>
